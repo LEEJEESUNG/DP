@@ -1,0 +1,33 @@
+{% extends "web/layout.html" %}
+
+{% block content %}
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                表示・非表示<br>
+                表示：True<br>
+                非表示：False<br>
+            </th>
+            <th>
+                データ本体
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for node in nodes %}
+            <tr class="">
+                <td>
+                    {{ node.visible }}
+                </td>
+                <td>
+                    {{ node.data }}
+                </td>
+            </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+</div>
+{% endblock content %}
